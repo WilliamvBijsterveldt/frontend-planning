@@ -1,0 +1,23 @@
+<h2> Plannings </h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th> Activity Type</th>
+    <th> Description</th>
+    <th> Start date</th>
+    <th> End date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let planning of plannings">
+    <td> {{ planning.activityType }} </td>
+    <td> {{ planning.description }} </td>
+    <td> {{ planning.startDate | date: 'fullDate'}} </td>
+    <td> {{ planning.endDate | date: 'fullDate'}} </td>
+    <td>
+      <button (click)="updatePlanning(planning.id)" class="btn btn-info">Update</button>
+      <button (click)="deletePlanning(planning.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,33 @@
+<div class="container">
+  <h1> Test </h1>
+  <form (ngSubmit)="onSubmit()">
+    <div class="col">
+      <div class="form-group">
+        <label>Activity</label>
+        <input type="text" class="form-control" id="activityType"
+               [(ngModel)]="planning.activityType" name="activityType">
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" id="description"
+               [(ngModel)]="planning.description" name="description">
+      </div>
+
+      <div class="form-group">
+        <label>Start date</label>
+        <input type="date" class="form-control" id="startDate"
+               [(ngModel)]="planning.startDate" name="startDate">
+      </div>
+
+      <div class="form-group">
+        <label>End date</label>
+        <input type="date" class="form-control" id="endDate"
+               [(ngModel)]="planning.endDate" name="endDate">
+      </div>
+    </div>
+    <div class="pt-2">
+      <button class="btn btn-success" type="submit">Submit</button>
+    </div>
+  </form>
+</div>

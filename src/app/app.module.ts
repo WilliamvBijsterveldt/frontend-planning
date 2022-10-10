@@ -1,16 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from "@angular/common/http";
+import { RouterLinkWithHref, RouterOutlet } from "@angular/router";
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import {FormsModule} from "@angular/forms";
+import { UpdatePlanningComponent } from './update-planning/update-planning.component';
+import { PlanningListComponent } from './planning-list/planning-list.component';
+import { CreatePlanningComponent } from './create-planning/create-planning.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UpdatePlanningComponent,
+    PlanningListComponent,
+    CreatePlanningComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    RouterOutlet,
+    RouterLinkWithHref,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
