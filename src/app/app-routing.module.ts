@@ -4,9 +4,11 @@ import { RouterModule, Routes} from "@angular/router";
 import {UpdatePlanningComponent} from "./update-planning/update-planning.component";
 import {PlanningListComponent} from "./planning-list/planning-list.component";
 import {CreatePlanningComponent} from "./create-planning/create-planning.component";
+import {CalendarComponent} from "./calendar/calendar.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'plannings', pathMatch: 'full'},
+  {path: 'calendar', component: CalendarComponent},
+  {path: '', redirectTo: 'calendar', pathMatch: 'full'},
   {path: 'update/:id', component: UpdatePlanningComponent},
   {path: 'plannings', component: PlanningListComponent},
   {path: 'create', component: CreatePlanningComponent}
