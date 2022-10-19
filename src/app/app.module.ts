@@ -5,16 +5,16 @@ import { RouterLinkWithHref, RouterOutlet } from "@angular/router";
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from "@angular/forms";
-import { UpdatePlanningComponent } from './update-planning/update-planning.component';
-import { PlanningListComponent } from './planning-list/planning-list.component';
-import { CreatePlanningComponent } from './create-planning/create-planning.component';
+import { UpdatePlanningComponent } from './Components/update-planning/update-planning.component';
+import { PlanningListComponent } from './Components/planning-list/planning-list.component';
+import { CreatePlanningComponent } from './Components/create-planning/create-planning.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UpdatePlanningComponent,
     PlanningListComponent,
-    CreatePlanningComponent
+    CreatePlanningComponent,
   ],
   imports: [
     BrowserModule,
