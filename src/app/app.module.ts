@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import { UpdatePlanningComponent } from './Components/update-planning/update-planning.component';
 import { PlanningListComponent } from './Components/planning-list/planning-list.component';
 import { CreatePlanningComponent } from './Components/create-planning/create-planning.component';
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CreatePlanningComponent } from './Components/create-planning/create-pla
     UpdatePlanningComponent,
     PlanningListComponent,
     CreatePlanningComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
