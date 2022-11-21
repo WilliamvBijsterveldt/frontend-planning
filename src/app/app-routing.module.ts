@@ -4,12 +4,18 @@ import { RouterModule, Routes} from "@angular/router";
 import {UpdatePlanningComponent} from "./Components/update-planning/update-planning.component";
 import {PlanningListComponent} from "./Components/planning-list/planning-list.component";
 import {CreatePlanningComponent} from "./Components/create-planning/create-planning.component";
+import {RegisterUserComponent} from "./Components/register-user/register-user.component";
+import {UsersListComponent} from "./Components/users-list/users-list.component";
+import {UpdateUserComponent} from "./Components/update-user/update-user.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'plannings', pathMatch: 'full'},
-  {path: 'update/:id', component: UpdatePlanningComponent},
+  {path: 'update-planning/:id', component: UpdatePlanningComponent},
   {path: 'plannings', component: PlanningListComponent},
-  {path: 'create', component: CreatePlanningComponent},
+  {path: 'create-planning', component: CreatePlanningComponent},
+  {path: 'register-user', component: RegisterUserComponent},
+  {path: 'users', component: UsersListComponent},
+  {path: 'update-user', component: UpdateUserComponent}
 ];
 
 @NgModule({

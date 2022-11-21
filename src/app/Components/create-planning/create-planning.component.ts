@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Planning} from "../../planning";
-import {PlanningService} from "../../planning.service";
+import {Planning} from "../../Models/planning";
+import {PlanningService} from "../../Services/planning.service";
 import {Router} from "@angular/router";
 
 @Component({
