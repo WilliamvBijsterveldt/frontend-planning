@@ -27,7 +27,7 @@ export class PlanningListComponent implements OnInit {
   }
 
   updatePlanning(id: number) {
-    this.router.navigate(['update', id]);
+    this.router.navigate(['update-planning', id]);
   }
 
   deletePlanning(id: number) {
