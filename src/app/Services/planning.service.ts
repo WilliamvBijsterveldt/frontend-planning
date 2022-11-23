@@ -9,27 +9,27 @@ import { Planning } from "../Models/planning";
 
 export class PlanningService {
 
-  private baseURL = "http://localhost:8080/planning";
+  private baseURL = "http://localhost:8080";
 
   constructor(private httpClient: HttpClient) { }
 
   getPlanning(): Observable<Planning[]> {
-    return this.httpClient.get<Planning[]>(`${this.baseURL}`);
+    return this.httpClient.get<Planning[]>(`${this.baseURL}/planning`);
   }
 
   createPlanning(planning: Planning): Observable<Object> {
-    return this.httpClient.post(`${this.baseURL}`, planning);
+    return this.httpClient.post(`${this.baseURL}/planning`, planning);
   }
 
   getPlanningById(id: number): Observable<Planning> {
-    return this.httpClient.get<Planning>(`${this.baseURL}/${id}`);
+    return this.httpClient.get<Planning>(`${this.baseURL}/planning/${id}`);
   }
 
   updatePlanning(id: number, planning: Planning): Observable<Object> {
-    return this.httpClient.put(`${this.baseURL}/${id}`, planning);
+    return this.httpClient.put(`${this.baseURL}/${id}/planning`, planning);
   }
 
   deletePlanning(id: number): Observable<Object> {
-    return this.httpClient.delete(`${this.baseURL}/${id}`);
+    return this.httpClient.delete(`${this.baseURL}/planning/${id}`);
   }
 }
