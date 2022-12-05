@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
-import { RouterLinkWithHref, RouterOutlet } from "@angular/router";
+import { RouterLink, RouterOutlet } from "@angular/router";
 import { AppComponent } from './Components/App-component/app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from "@angular/forms";
@@ -27,7 +27,7 @@ import { UpdateUserComponent } from './Components/update-user/update-user.compon
     AppRoutingModule,
     HttpClientModule,
     RouterOutlet,
-    RouterLinkWithHref,
+    RouterLink,
     FormsModule
   ],
   providers: [],
