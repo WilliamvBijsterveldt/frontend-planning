@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Planning } from "../Models/planning";
+import {CreatePlanning} from "../Models/create-planning";
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +18,8 @@ export class PlanningService {
     return this.httpClient.get<Planning[]>(`${this.baseURL}/planning`);
   }
 
-  createPlanning(planning: Planning): Observable<Object> {
-    return this.httpClient.post(`${this.baseURL}/planning`, planning);
+  createPlanning(createPlanning: CreatePlanning): Observable<Object> {
+    return this.httpClient.post(`${this.baseURL}/planning`, createPlanning);
   }
 
   getPlanningById(id: number): Observable<Planning> {

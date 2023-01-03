@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Planning} from "../../Models/planning";
 import {PlanningService} from "../../Services/planning.service";
 import {Router} from "@angular/router";
+import {CreatePlanning} from "../../Models/create-planning";
+import {Coordinate} from "../../Models/coordinate";
 
 @Component({
   selector: 'app-create-planning',
@@ -10,16 +12,20 @@ import {Router} from "@angular/router";
 })
 export class CreatePlanningComponent implements OnInit {
 
-  planning: Planning = new Planning();
+  createPlanning: CreatePlanning = new CreatePlanning();
 
   constructor(private planningService: PlanningService,
-              private router: Router) { }
+              private router: Router) {
 
-  ngOnInit(): void {
+    this.createPlanning.planning = new Planning();
   }
 
-  createPlanning(){
-    this.planningService.createPlanning(this.planning).subscribe( data => {
+  ngOnInit(): void {
+    this.createPlanning.coordinate = new Coordinate(12.00, 12.00 );
+  }
+
+  savePlanning(){
+    this.planningService.createPlanning(this.createPlanning).subscribe( data => {
         console.log(data)
         this.getPlanning();
       },
@@ -31,8 +37,8 @@ export class CreatePlanningComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.planning)
-    this.createPlanning()
+    console.log(this.createPlanning)
+    this.savePlanning()
   }
 
 }
