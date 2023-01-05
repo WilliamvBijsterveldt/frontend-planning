@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Planning} from "../../Models/planning";
 import {PlanningService} from "../../Services/planning.service";
 import {Router} from "@angular/router";
+import {MatDialog, MatDialogModule} from "@angular/material/dialog";
+import {DialogComponent} from "../dialog/dialog.component";
 
 @Component({
   selector: 'app-planning-list',
@@ -13,7 +15,8 @@ export class PlanningListComponent implements OnInit {
   plannings: Planning[];
 
   constructor(private planningService: PlanningService,
-              private router: Router) {
+              private router: Router,
+              private matDialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -36,5 +39,13 @@ export class PlanningListComponent implements OnInit {
         this.getPlannings();
       },
       error => console.log(error));
+  }
+
+  showWeather() {
+    this.matDialog.open(DialogComponent, {
+      data: {
+
+      }
+    })
   }
 }

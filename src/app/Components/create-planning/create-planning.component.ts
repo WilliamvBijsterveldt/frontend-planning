@@ -21,7 +21,7 @@ export class CreatePlanningComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.createPlanning.coordinate = new Coordinate(12.00, 12.00 );
+    this.getLocation();
   }
 
   savePlanning(){
@@ -39,6 +39,19 @@ export class CreatePlanningComponent implements OnInit {
   onSubmit() {
     console.log(this.createPlanning)
     this.savePlanning()
+  }
+
+  getLocation(): void {
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const lon = position.coords.longitude;
+        const lat = position.coords.latitude;
+
+        this.createPlanning.coordinate = new Coordinate(lat, lon);
+      });
+    } else {
+      console.log("No support for geolocation")
+    }
   }
 
 }

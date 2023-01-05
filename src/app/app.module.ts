@@ -11,6 +11,10 @@ import { CreatePlanningComponent } from './Components/create-planning/create-pla
 import { RegisterUserComponent } from './Components/register-user/register-user.component';
 import { UsersListComponent } from './Components/users-list/users-list.component';
 import { UpdateUserComponent } from './Components/update-user/update-user.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogComponent } from './Components/dialog/dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -21,6 +25,7 @@ import { UpdateUserComponent } from './Components/update-user/update-user.compon
     RegisterUserComponent,
     UsersListComponent,
     UpdateUserComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,10 @@ import { UpdateUserComponent } from './Components/update-user/update-user.compon
     HttpClientModule,
     RouterOutlet,
     RouterLink,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
