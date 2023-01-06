@@ -7,7 +7,7 @@ import {Clock} from "../Models/clock";
   providedIn: 'root'
 })
 export class WebsocketService {
-  baseUrl: string = "ws://localhost:5074/WebSocket"
+  baseUrl: string = "ws://localhost:5209/WebSocket"
 
   constructor() { }
 
