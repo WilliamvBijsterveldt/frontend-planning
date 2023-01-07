@@ -27,7 +27,7 @@ export class RegisterUserComponent implements OnInit {
   }
 
   getUser() {
-    this.router.navigate(['/user']);
+    this.router.navigate(['/users']);
   }
 
   onSubmit() {

@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponent } from './Components/dialog/dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {MatButtonModule} from "@angular/material/button";
     UsersListComponent,
     UpdateUserComponent,
     DialogComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import {CreatePlanningComponent} from "./Components/create-planning/create-plann
 import {RegisterUserComponent} from "./Components/register-user/register-user.component";
 import {UsersListComponent} from "./Components/users-list/users-list.component";
 import {UpdateUserComponent} from "./Components/update-user/update-user.component";
+import {LoginComponent} from "./Components/login/login.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'plannings', pathMatch: 'full'},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'create-planning', component: CreatePlanningComponent},
   {path: 'register-user', component: RegisterUserComponent},
   {path: 'users', component: UsersListComponent},
-  {path: 'update-user', component: UpdateUserComponent}
+  {path: 'update-user', component: UpdateUserComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
