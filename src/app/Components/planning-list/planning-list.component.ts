@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Planning} from "../../Models/planning";
 import {PlanningService} from "../../Services/planning.service";
 import {Router} from "@angular/router";
-import {MatDialog, MatDialogModule} from "@angular/material/dialog";
+import {MatDialog, MatDialogModule, MAT_DIALOG_DATA} from "@angular/material/dialog";
 import {DialogComponent} from "../dialog/dialog.component";
 
 @Component({
@@ -23,7 +23,7 @@ export class PlanningListComponent implements OnInit {
     this.getPlannings();
   }
 
-  private getPlannings() {
+  getPlannings() {
     this.planningService.getPlanning().subscribe(data => {
       this.plannings = data;
     });
@@ -34,8 +34,7 @@ export class PlanningListComponent implements OnInit {
   }
 
   deletePlanning(id: number) {
-    this.planningService.deletePlanning(id).subscribe(data => {
-        console.log(data)
+    this.planningService.deletePlanning(id).subscribe(() => {
         this.getPlannings();
       },
       error => console.log(error));
@@ -47,5 +46,9 @@ export class PlanningListComponent implements OnInit {
 
       }
     })
+  }
+
+  goToCreatePage() {
+    this.router.navigate(['create-planning']);
   }
 }

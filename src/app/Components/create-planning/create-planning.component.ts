@@ -54,4 +54,15 @@ export class CreatePlanningComponent implements OnInit {
     }
   }
 
+  validate(){
+    const form = document.getElementsByClassName('needs-validation')[0] as HTMLFormElement;
+    if (form.checkValidity() === false) {
+      // @ts-ignore
+      event.preventDefault();
+      // @ts-ignore
+      event.stopPropagation();
+    }
+    form.classList.add('was-validated');
+  }
+
 }
